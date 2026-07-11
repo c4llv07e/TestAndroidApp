@@ -7,7 +7,21 @@
     <application
         android:label="TestApp"
         android:debuggable="true">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+                  android:label="TestApp Main"
+                  android:launchMode="singleTask"
+                  android:taskAffinity="com.c4llv07e.testapp.main_task"
+                  android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"
+                  android:label="TestApp Second"
+                  android:launchMode="singleTask"
+                  android:taskAffinity="com.c4llv07e.testapp.second_task"
+                  android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
